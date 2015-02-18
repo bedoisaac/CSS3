@@ -31,8 +31,8 @@ hgroup, menu, nav, section {
 }
 
 /*
-** ths font style doen't apply to all cus the reset css se fontstest.html 
-** It worked pretty good.!!!!!!
+** ths font style doen't apply to all cus the reset css  to  ++solve this deleted font: inherit; from css reset++
+**   see fontstest.html  It worked pretty good.!!!!!!
 **
 **
 */
