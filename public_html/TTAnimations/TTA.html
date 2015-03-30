@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transform, Transitions and Animations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--The one below .js put the vendor prefix so I don't have to write it down-->
+        <script type="text/javascript" src="../Js/prefixfree.min.js"></script>
+        <style type="text/css">
+            
+            html{
+                background-color: #323A3F;
+            }
+            body{
+                width: 740px;
+                margin: 0 auto;
+                background-color: #002D4B;
+            }
+            h1{
+                text-transform: uppercase;
+                background-color: #207EBF;
+                text-align: center;
+                color: #272D32;
+                margin: 30px 0 30px 0;
+                padding: 9px 2px 9px 2px;
+                border: 1px #002D4B solid;
+            }
+            
+            div{
+                text-align: center;
+                margin: 10px 0 10px 0;
+                border: 1px #006666 dotted;
+                padding: 20px 2px 20px 2px;
+                background-color: #AFC3D6;
+            }
+            figure{
+                
+                display:inline-block;
+                width: 210px;
+                margin: 5px;
+                
+                
+            }
+            
+            figcaption{
+                text-align: center;
+                color: #006666;
+                font-weight: bold;
+                
+            }
+            
+            .gallery img{
+                transform: rotate(-5deg);
+                border: 2px blue solid;
+                margin: 5px;
+                padding: 1px;
+            }
+            
+            
+            .gallery2 img{
+                transform: scale(-1,1);
+                
+            }
+            
+            .gallery img:hover , .gallery2 img:hover{
+                transform: translateX(-.15em);
+                
+            }
+            
+            .special img:hover{
+                transform: skew(45deg,0deg) scale(.5) translate(40px,50px) rotate(90deg);
+                transform-origin: left bottom;
+                
+            }
+            
+            /* TRANSITIONS*/ 
+             .gallery3 img{
+                
+               
+                margin: 5px 5px 5px 5px;
+                padding: 10px;
+                background-color: #207EBF;
+                transition-property: all ;
+                transition-duration: 1.5s;
+                
+                
+                
+            }
+            
+            .gallery3 img:hover{
+                background-color: #0033cc;
+                transform: scale(1.1);
+                
+            }
+            
+            .gallery4 img{
+                
+               
+                margin: 5px 5px 5px 5px;
+                padding: 10px;
+                background-color: #323A3F;
+                transition-property: all ;
+                transition-duration: .5s;
+                transition-timing-function: ease-in-out;
+                transition-delay: .5s;
+                               
+            }
+            
+            
+            .gallery4 img:hover{
+                background-color: #65747E;
+                transform: scale(1.1);
+                transition-delay: 0;
+            }
+            /*
+            .gallery img:hover{
+                transform: rotate(360deg);
+            }*/
+           
+            #crossfade {
+                position: relative;
+                height:250px;
+                width: 250px;
+                margin: 0 auto;
+                
+                
+                
+            }
+            
+            #crossfade img{
+                position:absolute;
+                left: 0;
+                opacity: 1;
+                transition: opacity 1s ease-in-out;
+                padding: 25px ;
+            }
+            #crossfade img.top:hover{
+                opacity: 0;
+            }
+            
+            /*ANIMATIONS*/
+            
+            @keyframes fadeIn{
+                from{
+                    opacity:0;
+                    animation-timing-function: cubic-bezier(1, .03, 1, .115);
+                    
+                }
+                20%, 60%{
+                    background-color:#00FF40;
+                    transform: scale(.7);
+                    border: dotted;
+                    animation-timing-function: linear;
+                }
+                40%, 80%{
+                    opacity:1;
+                    background-color: #088A08;
+                    transform: scale(1);
+                    
+                    
+                    
+                }
+                to{
+                    background-color:#82FA58;
+                    transform: scale(.8);
+                }
+            }
+            
+            .animacion{
+               
+                animation-name: fadeIn;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+               animation-fill-mode: forwards;
+               
+                
+            }
+            .animacion:hover{
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body> 
+        
+        <h1>csss transforms, transitions, and animations.</h1>
+        <div class="gallery">
+       
+        <figure>
+            <img src="catfrog.jpg" alt="catfrog" title="Gato_Rana" width="200" height="200" />
+            <figcaption><small>Gato Rana</small></figcaption>
+        </figure>
+        
+        
+         <figure>
+            <img src="monkey.jpg" alt="monkey" title="Monkey" width="200" height="200" />
+            <figcaption><small>Monkey</small></figcaption>
+           
+        </figure>
+        
+        <figure class="special">
+            <img src="pandaride.jpg" alt="panda" title="Panda" width="200" height="200" />
+            <figcaption><small>Panda</small></figcaption>
+           
+        </figure>
+        </div>
+        
+        <div class="gallery2">
+       
+        <figure>
+            <img src="don_gato.jpg" alt="catfrog" title="Don Gato" width="200" height="200" />
+            <figcaption><small>Don Gato</small></figcaption>
+        </figure>
+        
+        
+         <figure>
+            <img src="superardilla.jpg" alt="monkey" title="S-A" width="200" height="200" />
+            <figcaption><small>Super Ardilla</small></figcaption>
+           
+        </figure>
+        
+        <figure>
+            <img src="panda.jpg" alt="panda" title="Panda" width="200" height="200" />
+            <figcaption><small>Panda</small></figcaption>
+           
+        </figure>
+        </div>
+        
+         <div class="gallery3">
+       
+        <figure>
+            <img src="catfrog.jpg" alt="catfrog" title="Gato_Rana" width="200" height="200" />
+            <figcaption><small>Gato Rana</small></figcaption>
+        </figure>
+        
+        
+         <figure>
+            <img src="monkey.jpg" alt="monkey" title="Monkey" width="200" height="200" />
+            <figcaption><small>Monkey</small></figcaption>
+           
+        </figure>
+        
+             <figure class="special2">
+            <img src="pandaride.jpg" alt="panda" title="Panda" width="200" height="200" />
+            <figcaption><small>Panda</small></figcaption>
+           
+        </figure>
+        </div>
+          
+        <div class="gallery4">
+       
+        <figure>
+            <img src="don_gato.jpg" alt="catfrog" title="Don Gato" width="200" height="200" />
+            <figcaption><small>Don Gato</small></figcaption>
+        </figure>
+        
+        
+         <figure>
+            <img src="superardilla.jpg" alt="monkey" title="S-A" width="200" height="200" />
+            <figcaption><small>Super Ardilla</small></figcaption>
+           
+        </figure>
+        
+        <figure>
+            <img src="panda.jpg" alt="panda" title="Panda" width="200" height="200" />
+            <figcaption><small>Panda</small></figcaption>
+           
+        </figure>
+        </div>
+        
+        <div id="crossfade">
+            
+            <img class="bottom" src="catfrog.jpg" width="200" height="200" alt="gato" title="Gat0o"/>
+    <img class="top" src="don_gato.jpg" width="200" height="200" alt="gato" title="Gato"/>
+    
+</div>
+        
+        <div class="animacion">
+       
+        <figure>
+            <img src="catfrog.jpg" alt="catfrog" title="Gato_Rana" width="200" height="200" />
+            <figcaption><small>Gato Rana</small></figcaption>
+        </figure>
+        
+        
+         <figure>
+            <img src="monkey.jpg" alt="monkey" title="Monkey" width="200" height="200" />
+            <figcaption><small>Monkey</small></figcaption>
+           
+        </figure>
+        
+        <figure>
+            <img src="pandaride.jpg" alt="panda" title="Panda" width="200" height="200" />
+            <figcaption><small>Panda</small></figcaption>
+           
+        </figure>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tutorial Animations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--The one below .js put the vendor prefix so I don't have to write it down-->
+        <script type="text/javascript" src="prefixfree.min.js"></script>
+        <script type="text/javascript" src="html5shiv.js"></script>
+        
+        
+        <style type="text/css">
+            /* reset browser styles */
+            html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1.2;
+            }
+            ol { 
+                padding-left: 1.4em;
+                list-style: decimal;
+            }
+            ul {
+                padding-left: 1.4em;
+                list-style: square;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            } 
+            /* end reset browser styles */
+
+            body {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	
+            }
+ /* seems to be some error it doesnt load the prefizfree on gradients did it manualy*/ 
+            header{
+               
+                
+               background: -webkit-linear-gradient(top, rgba(255,214,94,1),rgba(242,236,188,1)); 
+                padding-top: 20px;}
+            
+            .container{
+                width: 960px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 10px 0 30px 0;
+                text-align:right;
+                position: relative;
+                
+            }
+            
+            .logo{
+                position: absolute;
+                top: -20px;
+                left: 0;
+            }
+            
+            header h1{
+                font-size: 2.2em;
+                margin:  0 0 10px 0;
+                color: rgb(42,67,101);
+            }
+            
+            nav{
+                margin-left: 200px;
+            }
+            
+            nav li{
+                display: inline;
+            }
+            
+            nav a{
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1.2em;
+                color: #fff;
+                padding: 10px 20px;
+                background: #ff932d;
+                border-radius: 5px;
+                border: 1px solid #c95e00;
+                box-shadow: 
+                    0px 0px 0px rgba(000,000,000,0),
+                    inset 0px 2px 0px rgba(255,255,255,0.7);
+                transition: transform .5s,
+                            background-color 1s ease-in .5s;
+                    
+            }
+           
+            nav a:hover{
+                transform: scale(1.2);
+                transition: all .5s;
+                background-color: #f60;
+            }
+            
+            @keyframes logo{
+                from{
+                    transform:rotate(0) scale(.5);
+                    left:120%;
+                    
+                }
+                50%{
+                    transform:rotate(-720deg) scale(.5);
+                    left:0;
+                    
+                }
+                to{
+                    transform:rotate(0) scale(1);
+                    
+                    
+                }
+            }
+            
+            .logo{
+                animation: logo 5s;
+                
+               
+            }
+
+        
+
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="logo.png" class="logo" width="150" height="150" alt="CSS3: The Missing Manual">
+                <h1>CSS3 Transforms, Transitions and Animations</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Story</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>
